@@ -1,0 +1,37 @@
+{% extends 'ams/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Teacher Dashboard</title>
+{% endblock title %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="card mr-5" style="width: 18rem;">
+            <img src="{% static 'ams/img/c1.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Create Classroom</h5>
+              <p class="card-text">Create a classroom for free</p>
+              <a href="{% url 'group:create_classroom' %}" class="btn btn-primary">Create</a>
+            </div>
+          </div>
+          <div class="card mr-5" style="width: 18rem;">
+            <img src="{% static 'ams/img/c2.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Classroom List</h5>
+              <p class="card-text">View the classrooms you are part of</p>
+              <a href="{% url 'group:classroom_list' %}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+          <div class="card mr-5" style="width: 18rem;">
+            <img src="{% static 'ams/img/c3.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Join Classrooms</h5>
+              <p class="card-text">Join the classroom with the unique code</p>
+              <a href="{% url 'group:join_classroom' %}" class="btn btn-primary">Join</a>
+            </div>
+          </div>
+    </div>
+{% endblock content %}
+    
